@@ -8,7 +8,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(params[:user])
+    p "hola"
+    @user = User.create(first_name: params[:user][:first_name])
+    @user = User.create(username: params[:user][:username])
+
   end
 
   private
